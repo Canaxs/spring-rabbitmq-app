@@ -15,7 +15,6 @@ public class CustomMessage {
 	
 	private String messageId;
 	private String message;
-	private String messages;
 	private Date messageDate;
 	
 	

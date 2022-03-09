@@ -32,8 +32,7 @@ public class MQConfig {
 				to(exchange)
 				.with(ROUTING_KEY);	
 		
-	}
-	
+	} 
 	@Bean
 	public MessageConverter messageConverter() {
 		return new Jackson2JsonMessageConverter();

@@ -1,5 +1,6 @@
 package com.rabbitmq.model;
 
+
 import java.util.Date;
 import java.util.UUID;
 
@@ -19,7 +20,6 @@ public class MessageProviderController {
 	public String publisMessage(@RequestBody CustomMessage message) {
 		message.setMessageId(UUID.randomUUID().toString());
 		message.setMessageDate(new Date());
-		message.setMessages("fjfjf");
 		rabbitTemplate.convertAndSend(MQConfig.EXCHANGE,
 				MQConfig.ROUTING_KEY, message);
 		return "Message Published";
